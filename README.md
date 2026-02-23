@@ -18,7 +18,7 @@
 **Hybrid retrieval core engineered for decisive signal ranking.**
 
 ## Vision
-Kryonexus is a production-oriented skill in the **smouj SuperAgents Universe**. It is designed to solve a concrete operational problem with local-first execution, transparent reasoning traces, and practical safety controls. The architecture prioritizes free/open-source tooling, deterministic behavior, and modular integration with other autonomous skills.
+Kryonexus is a hybrid retrieval and ranking skill that combines keyword search and vector similarity to deliver high-precision results. It is optimized for decision support, fast query resolution, and explainable ranking in noisy information environments.
 
 ## Core Superpower
 - ⚡ **Deterministic hybrid ranking under noisy information**
