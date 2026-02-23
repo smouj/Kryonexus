@@ -1,0 +1,10 @@
+faiss-cpu
+mypy>=1.10
+numpy
+pydantic
+pydantic>=2.7
+pytest>=8.0
+python-dotenv>=1.0
+rank-bm25
+ruff>=0.6
+scikit-learn
