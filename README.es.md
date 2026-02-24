@@ -1,13 +1,13 @@
 # Kryonexus
 
 <p align="center">
-  <img src="./assets/branding/logo.svg" alt="Kryonexus logo" width="88" />
+  <img src="./assets/branding/logo.svg" alt="Logo de Kryonexus" width="88" />
 </p>
 
 ![Language](https://img.shields.io/badge/language-Python%203.11%2B-blue)
 ![License](https://img.shields.io/github/license/smouj/Kryonexus)
 ![Last Commit](https://img.shields.io/github/last-commit/smouj/Kryonexus)
-![CI](https://img.shields.io/badge/CI-planned-lightgrey)
+![CI](https://img.shields.io/github/actions/workflow/status/smouj/Kryonexus/ci.yml?branch=main)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20this%20project-ff5f5f?logo=ko-fi&logoColor=white)](https://ko-fi.com/smouj013_dev)
 
 <p align="center">
@@ -15,63 +15,44 @@
   <a href="./README.es.md"><img src="https://img.shields.io/badge/README-Español-c92a2a?style=for-the-badge" alt="Español"></a>
 </p>
 
-**Hybrid retrieval core engineered for decisive signal ranking.**
+**High-performance hybrid retrieval and ranking engine.**
 
 ## Visión
-Kryonexus es una skill de recuperación y ranking híbrido que combina búsqueda por palabras clave y similitud vectorial para entregar resultados de alta precisión. Está optimizada para soporte a decisiones, resolución rápida de consultas y ranking explicable en entornos con ruido informativo.
+Combines lexical and semantic ranking for low-latency decision-grade results.
+
+## Problema que resuelve
+Single retrieval methods miss relevance in noisy datasets.
 
 ## Superpoder principal
-- ⚡ **Deterministic hybrid ranking under noisy information**
+- ⚡ **Hybrid rank fusion with streaming result interfaces**
 
-## Estado actual (Febrero 2026)
-- 🚧 Fase de ideación y scaffolding robusto
-- Próximos hitos:
-  - [ ] Finalizar contratos de dominio e interfaces
-  - [ ] Publicar un comando CLI mínimo ejecutable
-  - [ ] Añadir perfil de modelo local Ollama y estrategia de fallback
-  - [ ] Implementar un ejemplo completo end-to-end
-  - [ ] Añadir puertas de calidad (lint, typecheck, test)
-  - [ ] Publicar arquitectura y runbook operativo
-
-## Arquitectura planeada (stack gratuito/open-source)
-- **Lenguaje principal:** Python 3.11+
-- **Framework agente:** LangChain
-- **Modelos locales:** Ollama (Llama 3.1, Qwen2.5, DeepSeek-Coder, Mistral)
-- **Dependencias clave:** rank-bm25, faiss-cpu, numpy, scikit-learn, pydantic
-- **Modelo de ejecución:** local-first, despliegue self-hosted opcional
-
-## Blueprint de capacidades
-- ✅ BM25 + vector blend
-- ✅ Re-ranking policies
-- ✅ Recall/precision tuning
-- ✅ Fast query routing
-- ✅ Explainable scores
+## Casos de uso clave
+- ✅ Search backends
+- ✅ Decision support
+- ✅ Facet-ready retrieval
+- ✅ Relevance tuning
 
 
-## Estructura del proyecto
-```text
-Kryonexus/
-├── src/kryonexus/
-│   ├── core/           # orquestación de dominio y políticas
-│   ├── adapters/       # integraciones externas y puentes de herramientas
-│   ├── memory/         # estado, recuperación y estrategias de contexto
-│   └── cli.py          # interfaz de comandos local para operación
-├── docs/
-│   ├── IMPLEMENTATION.md
-│   ├── ARCHITECTURE.md
-│   └── RUNBOOK.md
-├── examples/
-├── tests/
-├── requirements.txt
-└── README.md
-```
+## Superficie API
+`POST /search`, `WS /search`, `GET /health`
+
+## Stack técnico
+- **Stack base:** FastAPI + BM25/FAISS strategy layer
+- **Ejecución:** local-first, apto para self-hosting
+- **Infra:** compatibilidad con Docker Compose + Caddy + Redis/Chroma/Ollama
+
+## Estado actual (Feb 2026)
+- ✅ Scaffold público disponible
+- ✅ README bilingüe (EN por defecto + ES)
+- ✅ Base de CI + release configurada
+- 🚧 Endurecimiento de funcionalidades en progreso
 
 ## Inicio rápido
 ```bash
 git clone https://github.com/smouj/Kryonexus.git
 cd Kryonexus
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+source .venv/bin/activate
 pip install -r requirements.txt
 python -m src.kryonexus.cli --help
 ```
@@ -83,10 +64,9 @@ python -m src.kryonexus.cli --help
 - [Guía de despliegue](./docs/DEPLOYMENT.md)
 - [Proceso de releases](./docs/RELEASE.md)
 - [Changelog](./CHANGELOG.md)
-- [Contribución](./CONTRIBUTING.md)
 
 ## Contribución
-Las contribuciones son bienvenidas. Lee **CONTRIBUTING.md** antes de abrir issues o PRs.
+Las contribuciones son bienvenidas. Lee [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Licencia
 MIT © 2026 smouj
